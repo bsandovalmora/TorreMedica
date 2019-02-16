@@ -7,9 +7,16 @@
     <package name="default" extends="struts-default">
         
     </package>
+<<<<<<< HEAD
     <package name="Controlador" namespace="/" extends="struts-default">
         <action name="consultar" class="Controlador.Service" method="execute">
             <result name="success">usuarios.jsp</result>
         </action>
     </package>
+=======
+    <package name="Controlador" extends="struts-default">
+        
+    </package>
+    
+>>>>>>> 32842b8fcd7e367c21027cb2c3ee67b801d717db
 </struts>
