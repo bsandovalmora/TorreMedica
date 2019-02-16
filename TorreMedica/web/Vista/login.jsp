@@ -31,6 +31,7 @@
             <label for="password">Constrase&ntilde;a:</label>
             <input type="password" name="password" id="tbpassword" value="" autocomplete="off">
             <input type="submit" class="ui-btn ui-btn-inline" value="Ingresar" style="background-color: #33CC33;margin-top:80px; width: 60px;">
+            <p> Aun sin cuenta? registrate<a href="formulario.jsp">aqu&iacute;</a></p>
         </form>
     </div>
 </body>
