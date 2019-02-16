@@ -34,7 +34,7 @@
         <h3>Elige el servicio para su cita</h3>
         <form action="cita">
             <div class="card" style="width: 18rem; float: left; margin-right:20px;">
-                <img class="card-img-top" src="Neurocirugia.jpg" alt="Card image cap">
+                <img class="card-img-top" src="img/Neurocirugia.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Neurocirugia</h5>
                     <p class="card-text">.</p>
@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="card" style="width: 18rem; float: left; margin-right:20px;">
-                <img class="card-img-top" src="cardiaca.jpg" alt="Card image cap">
+                <img class="card-img-top" src="img/cardiaca.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Cirugia Cardiaca</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="card" style="width: 18rem; margin-right:20px;">
-            <img class="card-img-top" src="anestecia.jpg" alt="Card image cap">
+            <img class="card-img-top" src="img/anestecia.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Anestecia</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
