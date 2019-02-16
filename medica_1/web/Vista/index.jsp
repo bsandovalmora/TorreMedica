@@ -120,7 +120,7 @@
 				<div class="card">
 					<div class="card-header"></div>
 					
-					<a href="servicios.jsp"><img class="card-img-top" src="img/servicio.jpg" alt="Card image cap"></a>
+					<a href="Vista/servicios.jsp"><img class="card-img-top" src="img/servicio.jpg" alt="Card image cap"></a>
 
 					<div class="card-body">
 						<h4 class="card-title">Servicios</h4>
@@ -132,7 +132,7 @@
 				<div class="card">
 					<div class="card-header"></div>
 					
-					<a href="usuarios.jsp"><img class="card-img-top" src="img/usuario.png" alt="Card image cap"></a>
+					<a href="Vista/usuarios.jsp"><img class="card-img-top" src="img/usuario.png" alt="Card image cap"></a>
 
 					<div class="card-body">
 						<h4 class="card-title">Usuarios</h4>
@@ -144,7 +144,7 @@
 				<dic class="card">
 					<div class="card-header"></div>
 					
-					<a href="medicos.jsp"><img class="card-img-top" src="img/medico.jpg" alt="Card image cap"></a>
+					<a href="Vista/medicos.jsp"><img class="card-img-top" src="img/medico.jpg" alt="Card image cap"></a>
 
 					<div class="card-body">
 						<h4 class="card-title">Médicos</h4>

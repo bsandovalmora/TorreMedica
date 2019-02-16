@@ -1,17 +1,22 @@
 <%-- 
-    Document   : usuarios
-    Created on : 16-feb-2019, 0:14:29
+    Document   : servicios
+    Created on : 16-feb-2019, 1:45:03
     Author     : Usuario
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="	anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script> 
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title>Usuarios</title>
+		<title>Servicios</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
@@ -78,10 +83,6 @@
 			.nav-link:hover {
 				border-bottom: #f1b802 solid;
 			}
-
-			#menu.faded .nav-link:hover {
-				color: #f1b802;
-			}
 			.colum1{
 				margin-top: 3%;
 				display: none;
@@ -89,9 +90,9 @@
 			}
 
 			.boton{
-				background-color: #007bff; 
-				border-radius: 25px;
+				background-color: #007bff; /* Green */
 				border: none;
+				border-radius: 25px;
 				color: white;
 				padding: 15px 32px;
 				text-align: center;
@@ -100,7 +101,7 @@
 				font-size: 16px;
 				margin: 4px 2px;
 				cursor: pointer;
-				-webkit-transition-duration: 0.4s; 
+				-webkit-transition-duration: 0.4s; /* Safari */
 				transition-duration: 0.4s;
 			}
 			.boton:hover {
@@ -115,7 +116,7 @@
 
 		<script>
 		$(document).ready(function(){
-		  $("button").click(function(){
+		  $("#bus").click(function(){
 		    $(".colum1").fadeIn("slow"); 
 		  });
 		});
@@ -132,11 +133,12 @@
 			<div class="collapse navbar-collapse" id="collapsibleNavId">
 				<ul class="navbar-right navbar-nav">
 					
-					<li class="nav-item">
-						<a class="nav-link" href="servicios.jsp">Servicios</a>
-					</li>
+					
 					<li class="nav-item active">
-						<a class="nav-link" href="usuarios.jsp">Usuarios <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="servicios.jsp">Servicios <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="usuarios.jsp">Usuarios</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="medicos.jsp">Medicos</a>
@@ -148,30 +150,61 @@
 	</div>
 	<hr>
 	<div class="container">
-  			<h1 style="margin-top: 5%;">Usuarios</h1>
-                        <form action="consultar">
-                            <div class="buscar">
-                                    <input type="text" name="nombre">
-                                    <button type="button" class="btn btn-primary">Buscar</button>
-                            </div>
-                        </form>
-  			<hr>
+  			<h1 style="margin-top: 5%;">Servicios</h1>
+  			<div class="buscar">
+
+  				<input type="text" name="nombre">
+  				<button type="button" id="bus" class="btn btn-primary">Buscar</button>
+  				
+  			</div>
+
+  			<div>
+  				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+			    Agregar Servicio
+			  </button>
+			  <hr>
+
+			  
+			  <div class="modal" id="myModal">
+					<div class="modal-dialog">
+						<div class="modal-content">
+						      
+						       
+							<div class="modal-header">
+						          <h4 class="modal-title">Agregar Medico</h4>
+						          <button type="button" class="close" data-dismiss="modal">&times;</button>
+						    </div>
+						        
+						        
+						    <div class="modal-body">
+							    <input type="text" class="form-control form-control-sm" placeholder="Tipo" style="margin-top: 2%;">
+							    <input type="text" class="form-control form-control-sm" placeholder="Descripción" style="margin-top: 2%;">
+							   
+							    <hr>
+							    <button type="button" id="bus" class="btn btn-primary">Agregar</button>
+							    <hr>
+						    </div>
+						        
+						       
+						    <div class="modal-footer">
+						    	<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+						    </div>
+						        
+						</div>
+					</div>
+				</div>
+			</div>
 
   			<div class="row">
-                            <s:iterator value="lista">
   				<div class="colum1">
-                                <img src="img/user.png" class="img-rounded" alt="">
-                                <h4><s:property value="nombre"></s:property> <s:property value="apellidos"></s:property></h4>
-                                <p>ID: <s:property value="id"></s:property></p>
-                                <p>Edad: <s:property value="edad"></s:property></p>
-                                <p>Direccion: <s:property value="direccion"></s:property></p>
+  					<img src="img/user.png" class="img-rounded" alt="">
+      				<p>Nombre</p>
       				<hr>
-      				<a href="perfil_usuario.html" class="boton" role="button">Ver</a>
+      				<a href="" class="boton" role="button">Ver</a>
       				<button type="button" class="boton">Eliminar</button>
       				<hr>
       				
   				</div>
-                            </s:iterator>
   			</div>
   	</div>
 
