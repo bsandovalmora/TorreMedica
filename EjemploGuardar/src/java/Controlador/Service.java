@@ -46,7 +46,7 @@ public class Service extends ActionSupport{
     
     public String insertar(){
         DatosDAO dao = new DatosDAO();
-        dao.Insertar(vo);
+        //dao.Insertar(vo);
         
         return "success";
     }
