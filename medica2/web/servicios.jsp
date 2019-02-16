@@ -189,7 +189,7 @@
   			<div class="row">
                             <s:iterator value="lista_servicio">
   				<div class="colum1">
-  				<img src="img/user.png" class="img-rounded" alt="">
+  				<img src="img/cruz-roja.jpg" class="img-rounded" alt="">
       				<p>Nombre: <s:property value="tipo"></s:property></p>
                                 <p>ID: <s:property value="id"></s:property></p>
                                 <p>Descripción: <s:property value="descrip"></s:property></p>
